@@ -1,0 +1,331 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const collections = [
+  {
+    title: 'Botanical Panels',
+    description:
+      'Statement artificial compositions with layered depth, refined texture and a convincingly natural finish for elevated interiors.',
+    tag: 'Installations',
+    items: 18,
+    image: '/images/gallery-triptych.png'
+  },
+  {
+    title: 'Framed Garden Pieces',
+    description:
+      'Curated compositions blending flowers, foliage and decorative details in a contemporary artistic language.',
+    tag: 'Wall Art',
+    items: 12,
+    image: '/images/gallery-triptych.png'
+  },
+  {
+    title: 'Nature in Glass',
+    description:
+      'Small aquascapes and terrarium worlds made of moss, stone and delicate living-looking scenery.',
+    tag: 'Terrariums & Aquascapes',
+    items: 9,
+    image: '/images/terrarium-pair.png'
+  }
+];
+
+const highlights = [
+  {
+    title: 'Organic aesthetic',
+    text: 'A calm premium visual identity shaped around texture, depth and natural composition.'
+  },
+  {
+    title: 'Curated presentation',
+    text: 'Each piece can be positioned as a singular artwork, a seasonal collection or a bespoke installation.'
+  },
+  {
+    title: 'Simple management',
+    text: 'The layout already leaves room for future inventory, pricing, availability and enquiry management.'
+  }
+];
+
+const artworks = [
+  {
+    name: 'Suspended Grove',
+    type: 'Floral panel',
+    status: 'Available',
+    size: '120 × 80 cm',
+    price: 'On request'
+  },
+  {
+    name: 'Silent Garden',
+    type: 'Botanical panel',
+    status: 'Commissioned',
+    size: '160 × 100 cm',
+    price: 'On request'
+  },
+  {
+    name: 'Glass Microforest',
+    type: 'Natural aquascape',
+    status: 'Available',
+    size: '45 × 30 cm',
+    price: 'On request'
+  },
+  {
+    name: 'Stone, Moss & Light',
+    type: 'Art terrarium',
+    status: 'In production',
+    size: '60 × 40 cm',
+    price: 'On request'
+  }
+];
+
+const gallery = [
+  {
+    title: 'Botanical Texture',
+    category: 'Foliage & florals',
+    heightClass: 'card-tall',
+    image: '/images/gallery-triptych.png'
+  },
+  {
+    title: 'Natural Depth',
+    category: 'Moss, stone & relief',
+    heightClass: 'card-xl',
+    image: '/images/terrarium-pair.png'
+  },
+  {
+    title: 'Sculptural Piece',
+    category: 'Authorial installation',
+    heightClass: 'card-medium',
+    image: '/images/gallery-triptych.png'
+  },
+  {
+    title: 'Glass Ecosystem',
+    category: 'Nature aquascape',
+    heightClass: 'card-large',
+    image: '/images/terrarium-pair.png'
+  },
+  {
+    title: 'Living Details',
+    category: 'Mini fauna & flora',
+    heightClass: 'card-compact',
+    image: '/images/gallery-triptych.png'
+  },
+  {
+    title: 'Editorial Composition',
+    category: 'Premium collection',
+    heightClass: 'card-xxl',
+    image: '/images/terrarium-pair.png'
+  }
+];
+---
+
+<BaseLayout
+  title="Moss & Form — Botanical Art Studio"
+  description="A clean artistic Astro landing page for botanical panels, terrariums and aquascapes."
+>
+  <div class="page-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div>
+          <p class="eyebrow">Studio Botanical Art</p>
+          <div class="brand-name">Moss & Form</div>
+        </div>
+
+        <nav class="nav desktop-nav">
+          <a href="#collections">Collections</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#management">Management</a>
+          <a href="#contact" class="button button-secondary button-small">Get in touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <div class="pill">Portfolio • Exhibition • Management</div>
+          <h1>
+            An artistic digital space for botanical works with presence, delicacy and premium value.
+          </h1>
+          <p class="hero-text">
+            Designed to showcase lifelike artificial panels, floral compositions, terrarium worlds,
+            aquascapes and nature-led pieces that sit between art, landscape styling and interior design.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#gallery" class="button button-primary">View gallery</a>
+            <a href="#management" class="button button-secondary">Open collection management</a>
+          </div>
+
+          <div class="highlights-grid">
+            {highlights.map((item) => (
+              <article class="soft-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="floating-panel floating-panel-sm">
+            <img src="/images/terrarium-pair.png" alt="Copper terrarium pieces" loading="eager" />
+          </div>
+          <div class="floating-panel floating-panel-md">
+            <img src="/images/gallery-triptych.png" alt="Botanical panel collection" loading="eager" />
+            <div class="floating-label">
+              <span>Authorial pieces</span>
+              <strong>Organic visual language</strong>
+            </div>
+          </div>
+          <div class="floating-panel floating-panel-caption">
+            <span class="caption-label">Aesthetic direction</span>
+            <strong>Clean, natural, contemporary and gallery-led.</strong>
+            <p>
+              The page already frames the work as collectible art while preparing the foundation for a
+              proper catalogue and enquiry flow.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="collections" class="section container">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="eyebrow">Collections</p>
+            <h2>How the work can be presented</h2>
+          </div>
+          <p class="section-support">
+            Structured to exhibit the studio’s main categories with calm sophistication and a clear sense of value.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          {collections.map((item) => (
+            <article class="collection-card">
+              <div class="collection-meta">
+                <span class="tag">{item.tag}</span>
+                <span class="count">{item.items} works</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <img src={item.image} alt={item.title} class="collection-image" loading="lazy" />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="gallery" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">Gallery</p>
+          <h2>An editorial visual rhythm</h2>
+          <p>
+            The layout is already ready for real photography, with large clean blocks and enough air to avoid the feel of a generic shopfront.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          {gallery.map((item) => (
+            <article class={`gallery-card ${item.heightClass}`}>
+              <img src={item.image} alt={item.title} loading="lazy" />
+              <div class="gallery-overlay">
+                <span>{item.category}</span>
+                <strong>{item.title}</strong>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="management" class="section container management-grid">
+        <article class="management-copy dark-card">
+          <p class="eyebrow eyebrow-light">Collection management</p>
+          <h2>A refined base for artworks, availability and commissions.</h2>
+          <p>
+            This already simulates an internal overview for managing creations. Later, it can evolve into a real system with login,
+            image upload, filters, pricing and status control.
+          </p>
+
+          <div class="feature-list">
+            <div>Register a new piece</div>
+            <div>Edit title, description and dimensions</div>
+            <div>Set status as available, sold or in production</div>
+            <div>Organise by collection, style or setting</div>
+          </div>
+        </article>
+
+        <article class="dashboard-card">
+          <div class="dashboard-top">
+            <div>
+              <p class="eyebrow">Dashboard</p>
+              <h3>Registered works</h3>
+            </div>
+            <div class="dashboard-actions">
+              <button class="button button-primary button-small" type="button">+ New artwork</button>
+              <button class="button button-secondary button-small" type="button">Filter</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Artwork</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Size</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {artworks.map((art) => (
+                  <tr>
+                    <td>{art.name}</td>
+                    <td>{art.type}</td>
+                    <td><span class="status-pill">{art.status}</span></td>
+                    <td>{art.size}</td>
+                    <td>{art.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <strong>39</strong>
+              <span>Works in archive</span>
+            </div>
+            <div class="stat-card">
+              <strong>12</strong>
+              <span>Available now</span>
+            </div>
+            <div class="stat-card">
+              <strong>7</strong>
+              <span>Commissioned</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="contact" class="section container">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Contact / commissions</p>
+            <h2>A digital presence that matches the sensitivity of the work.</h2>
+            <p>
+              This is a premium foundation for a real portfolio site. Next, you can swap the placeholders for real pieces,
+              add the final brand, biography, Instagram, WhatsApp and a working contact flow or CMS.
+            </p>
+          </div>
+
+          <form class="contact-form">
+            <input type="text" placeholder="Your name" />
+            <input type="email" placeholder="Your email" />
+            <textarea placeholder="Describe the environment or piece you have in mind"></textarea>
+            <button class="button button-primary" type="submit">Send enquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>
