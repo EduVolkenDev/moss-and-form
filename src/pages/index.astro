@@ -131,10 +131,11 @@ const gallery = [
         </div>
 
         <nav class="nav desktop-nav">
-          <a href="#collections">Collections</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#management">Management</a>
-          <a href="#contact" class="button button-secondary button-small">Get in touch</a>
+          <a href="#collections" data-i18n="nav.collections">Collections</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#management" data-i18n="nav.management">Management</a>
+          <button class="lang-toggle" id="langToggle" type="button">PT</button>
+          <a href="#contact" class="button button-secondary button-small" data-i18n="nav.contact">Get in touch</a>
         </nav>
       </div>
     </header>
@@ -142,27 +143,33 @@ const gallery = [
     <main>
       <section class="hero container">
         <div class="hero-copy">
-          <div class="pill">Portfolio • Exhibition • Management</div>
-          <h1>
+          <div class="pill" data-i18n="hero.pill">Portfolio • Exhibition • Management</div>
+          <h1 data-i18n="hero.title">
             An artistic digital space for botanical works with presence, delicacy and premium value.
           </h1>
-          <p class="hero-text">
+          <p class="hero-text" data-i18n="hero.text">
             Designed to showcase lifelike artificial panels, floral compositions, terrarium worlds,
             aquascapes and nature-led pieces that sit between art, landscape styling and interior design.
           </p>
 
           <div class="hero-actions">
-            <a href="#gallery" class="button button-primary">View gallery</a>
-            <a href="#management" class="button button-secondary">Open collection management</a>
+            <a href="#gallery" class="button button-primary" data-i18n="hero.btn_gallery">View gallery</a>
+            <a href="#management" class="button button-secondary" data-i18n="hero.btn_mgmt">Open collection management</a>
           </div>
 
           <div class="highlights-grid">
-            {highlights.map((item) => (
-              <article class="soft-card">
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
+            <article class="soft-card">
+              <h3 data-i18n="hl.1_title">Organic aesthetic</h3>
+              <p data-i18n="hl.1_text">A calm premium visual identity shaped around texture, depth and natural composition.</p>
+            </article>
+            <article class="soft-card">
+              <h3 data-i18n="hl.2_title">Curated presentation</h3>
+              <p data-i18n="hl.2_text">Each piece can be positioned as a singular artwork, a seasonal collection or a bespoke installation.</p>
+            </article>
+            <article class="soft-card">
+              <h3 data-i18n="hl.3_title">Simple management</h3>
+              <p data-i18n="hl.3_text">The layout already leaves room for future inventory, pricing, availability and enquiry management.</p>
+            </article>
           </div>
         </div>
 
@@ -173,16 +180,15 @@ const gallery = [
           <div class="floating-panel floating-panel-md">
             <img src="/images/gallery-triptych.png" alt="Botanical panel collection" loading="eager" />
             <div class="floating-label">
-              <span>Authorial pieces</span>
-              <strong>Organic visual language</strong>
+              <span data-i18n="float.label">Authorial pieces</span>
+              <strong data-i18n="float.title">Organic visual language</strong>
             </div>
           </div>
           <div class="floating-panel floating-panel-caption">
-            <span class="caption-label">Aesthetic direction</span>
-            <strong>Clean, natural, contemporary and gallery-led.</strong>
-            <p>
-              The page already frames the work as collectible art while preparing the foundation for a
-              proper catalogue and enquiry flow.
+            <span class="caption-label" data-i18n="float.caption_label">Aesthetic direction</span>
+            <strong data-i18n="float.caption_title">Clean, natural, contemporary and gallery-led.</strong>
+            <p data-i18n="float.caption_text">
+              The work is framed as collectible art with a foundation ready for a proper catalogue and enquiry flow.
             </p>
           </div>
         </div>
@@ -191,10 +197,10 @@ const gallery = [
       <section id="collections" class="section container">
         <div class="section-head section-head-split">
           <div>
-            <p class="eyebrow">Collections</p>
-            <h2>How the work can be presented</h2>
+            <p class="eyebrow" data-i18n="col.eyebrow">Collections</p>
+            <h2 data-i18n="col.title">How the work can be presented</h2>
           </div>
-          <p class="section-support">
+          <p class="section-support" data-i18n="col.support">
             Structured to exhibit the studio’s main categories with calm sophistication and a clear sense of value.
           </p>
         </div>
@@ -216,10 +222,10 @@ const gallery = [
 
       <section id="gallery" class="section container">
         <div class="section-head">
-          <p class="eyebrow">Gallery</p>
-          <h2>An editorial visual rhythm</h2>
-          <p>
-            The layout is already ready for real photography, with large clean blocks and enough air to avoid the feel of a generic shopfront.
+          <p class="eyebrow" data-i18n="gal.eyebrow">Gallery</p>
+          <h2 data-i18n="gal.title">An editorial visual rhythm</h2>
+          <p data-i18n="gal.text">
+            Large clean blocks with enough breathing room to let each piece stand on its own — far from the feel of a generic shopfront.
           </p>
         </div>
 
@@ -238,26 +244,27 @@ const gallery = [
 
       <section id="management" class="section container management-grid">
         <article class="management-copy dark-card">
-          <p class="eyebrow eyebrow-light">Collection management</p>
-          <h2>A refined base for artworks, availability and commissions.</h2>
-          <p>
-            This already simulates an internal overview for managing creations. Later, it can evolve into a real system with login,
-            image upload, filters, pricing and status control.
+          <p class="eyebrow eyebrow-light" data-i18n="mgmt.eyebrow">Studio management</p>
+          <h2 data-i18n="mgmt.title">Your collection, inventory and commissions in one place.</h2>
+          <p data-i18n="mgmt.text">
+            Register pieces, track availability, manage dimensions and pricing, organise by collection or style — and keep everything updated for clients and galleries.
           </p>
 
           <div class="feature-list">
-            <div>Register a new piece</div>
-            <div>Edit title, description and dimensions</div>
-            <div>Set status as available, sold or in production</div>
-            <div>Organise by collection, style or setting</div>
+            <div data-i18n="mgmt.f1">Register and edit artworks</div>
+            <div data-i18n="mgmt.f2">Track availability and commissions</div>
+            <div data-i18n="mgmt.f3">Organise by collection, style or setting</div>
+            <div data-i18n="mgmt.f4">Manage pricing and dimensions</div>
           </div>
+
+          <a href="/admin/" class="button button-primary" style="margin-top:1.5rem;width:fit-content;" data-i18n="mgmt.btn">Open studio panel</a>
         </article>
 
-        <article class="dashboard-card">
+        <article class="dashboard-card" id="dashboardPreview">
           <div class="dashboard-top">
             <div>
-              <p class="eyebrow">Dashboard</p>
-              <h3>Registered works</h3>
+              <p class="eyebrow" data-i18n="dash.eyebrow">Dashboard</p>
+              <h3 data-i18n="dash.title">Registered works</h3>
             </div>
             <div class="dashboard-actions">
               <button class="button button-primary button-small" type="button">+ New artwork</button>
@@ -265,67 +272,198 @@ const gallery = [
             </div>
           </div>
 
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Artwork</th>
-                  <th>Type</th>
-                  <th>Status</th>
-                  <th>Size</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {artworks.map((art) => (
-                  <tr>
-                    <td data-label="">{art.name}</td>
-                    <td data-label="Type">{art.type}</td>
-                    <td data-label="Status"><span class="status-pill">{art.status}</span></td>
-                    <td data-label="Size">{art.size}</td>
-                    <td data-label="Price">{art.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div class="dashboard-login-gate" id="adminGate">
+            <div class="gate-icon">&#127793;</div>
+            <strong data-i18n="gate.title">Studio access</strong>
+            <p data-i18n="gate.text">Sign in to manage your collection, update availability and track commissions.</p>
+            <div class="gate-form">
+              <input type="email" id="adminEmail" placeholder="Your email" class="gate-input" />
+              <input type="password" id="adminPass" placeholder="Password" class="gate-input" />
+              <button class="button button-primary button-small" type="button" id="adminLoginBtn">Sign in</button>
+            </div>
           </div>
 
-          <div class="stats-grid">
-            <div class="stat-card">
-              <strong>39</strong>
-              <span>Works in archive</span>
+          <div id="dashboardContent" style="display:none;">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Artwork</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Size</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {artworks.map((art) => (
+                    <tr>
+                      <td data-label="">{art.name}</td>
+                      <td data-label="Type">{art.type}</td>
+                      <td data-label="Status"><span class="status-pill">{art.status}</span></td>
+                      <td data-label="Size">{art.size}</td>
+                      <td data-label="Price">{art.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <div class="stat-card">
-              <strong>12</strong>
-              <span>Available now</span>
-            </div>
-            <div class="stat-card">
-              <strong>7</strong>
-              <span>Commissioned</span>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <strong>39</strong>
+                <span data-i18n="stat.1">Works in archive</span>
+              </div>
+              <div class="stat-card">
+                <strong>12</strong>
+                <span data-i18n="stat.2">Available now</span>
+              </div>
+              <div class="stat-card">
+                <strong>7</strong>
+                <span data-i18n="stat.3">Commissioned</span>
+              </div>
             </div>
           </div>
         </article>
+
+        <script>
+          // Simple admin gate — replace with real auth later
+          const gate = document.getElementById('adminGate');
+          const content = document.getElementById('dashboardContent');
+          const loginBtn = document.getElementById('adminLoginBtn');
+          const ADMIN_KEY = 'mossform_admin';
+
+          if (localStorage.getItem(ADMIN_KEY)) {
+            gate.style.display = 'none';
+            content.style.display = '';
+          }
+
+          loginBtn?.addEventListener('click', () => {
+            const email = document.getElementById('adminEmail')?.value;
+            const pass = document.getElementById('adminPass')?.value;
+            if (!email || !pass) return;
+            // For now, any non-empty credentials unlock the dashboard
+            // Replace with real auth when ready
+            localStorage.setItem(ADMIN_KEY, '1');
+            gate.style.display = 'none';
+            content.style.display = '';
+          });
+        </script>
       </section>
 
       <section id="contact" class="section container">
         <div class="contact-card">
           <div>
-            <p class="eyebrow">Contact / commissions</p>
-            <h2>A digital presence that matches the sensitivity of the work.</h2>
-            <p>
-              This is a premium foundation for a real portfolio site. Next, you can swap the placeholders for real pieces,
-              add the final brand, biography, Instagram, WhatsApp and a working contact flow or CMS.
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contact / commissions</p>
+            <h2 data-i18n="contact.title">Interested in a piece? Let's talk.</h2>
+            <p data-i18n="contact.text">
+              Whether you're looking for a bespoke installation, a statement panel for your space, or a unique gift — reach out and we'll discuss what's possible.
             </p>
           </div>
 
           <form class="contact-form">
-            <input type="text" placeholder="Your name" />
-            <input type="email" placeholder="Your email" />
-            <textarea placeholder="Describe the environment or piece you have in mind"></textarea>
-            <button class="button button-primary" type="submit">Send enquiry</button>
+            <input type="text" placeholder="Your name" data-i18n-placeholder="contact.ph_name" />
+            <input type="email" placeholder="Your email" data-i18n-placeholder="contact.ph_email" />
+            <textarea placeholder="Describe the environment or piece you have in mind" data-i18n-placeholder="contact.ph_msg"></textarea>
+            <button class="button button-primary" type="submit" data-i18n="contact.btn">Send enquiry</button>
           </form>
         </div>
       </section>
     </main>
   </div>
+
+  <script is:inline>
+  (function() {
+    var PT = {
+      "nav.collections": "Coleções",
+      "nav.gallery": "Galeria",
+      "nav.management": "Gestão",
+      "nav.contact": "Fale conosco",
+      "hero.pill": "Portfólio • Exposição • Gestão",
+      "hero.title": "Um espaço digital artístico para obras botânicas com presença, delicadeza e valor premium.",
+      "hero.text": "Criado para apresentar painéis artificiais realistas, composições florais, terrários, aquascapes e peças que transitam entre arte, paisagismo e design de interiores.",
+      "hero.btn_gallery": "Ver galeria",
+      "hero.btn_mgmt": "Gestão da coleção",
+      "hl.1_title": "Estética orgânica",
+      "hl.1_text": "Uma identidade visual premium e tranquila, moldada por textura, profundidade e composição natural.",
+      "hl.2_title": "Apresentação curada",
+      "hl.2_text": "Cada peça pode ser posicionada como obra singular, coleção sazonal ou instalação sob medida.",
+      "hl.3_title": "Gestão prática",
+      "hl.3_text": "O layout já prepara espaço para inventário, precificação, disponibilidade e fluxo de consultas.",
+      "float.label": "Peças autorais",
+      "float.title": "Linguagem visual orgânica",
+      "float.caption_label": "Direção estética",
+      "float.caption_title": "Limpa, natural, contemporânea e com referência de galeria.",
+      "float.caption_text": "O trabalho é enquadrado como arte colecionável, com base pronta para catálogo e consultas.",
+      "col.eyebrow": "Coleções",
+      "col.title": "Como o trabalho pode ser apresentado",
+      "col.support": "Estruturado para exibir as principais categorias do estúdio com sofisticação e senso claro de valor.",
+      "gal.eyebrow": "Galeria",
+      "gal.title": "Um ritmo visual editorial",
+      "gal.text": "Blocos amplos e limpos com respiro suficiente para cada peça se destacar — longe de uma vitrine genérica.",
+      "mgmt.eyebrow": "Gestão do estúdio",
+      "mgmt.title": "Sua coleção, inventário e encomendas em um só lugar.",
+      "mgmt.text": "Cadastre peças, acompanhe disponibilidade, gerencie dimensões e preços, organize por coleção ou estilo — e mantenha tudo atualizado para clientes e galerias.",
+      "mgmt.f1": "Cadastrar e editar obras",
+      "mgmt.f2": "Acompanhar disponibilidade e encomendas",
+      "mgmt.f3": "Organizar por coleção, estilo ou ambiente",
+      "mgmt.f4": "Gerenciar preços e dimensões",
+      "mgmt.btn": "Abrir painel do estúdio",
+      "dash.eyebrow": "Painel",
+      "dash.title": "Obras cadastradas",
+      "dash.btn_new": "+ Nova obra",
+      "dash.btn_filter": "Filtrar",
+      "gate.title": "Acesso ao estúdio",
+      "gate.text": "Entre para gerenciar sua coleção, atualizar disponibilidade e acompanhar encomendas.",
+      "gate.btn": "Entrar",
+      "stat.1": "Obras no acervo",
+      "stat.2": "Disponíveis agora",
+      "stat.3": "Sob encomenda",
+      "contact.eyebrow": "Contato / encomendas",
+      "contact.title": "Interesse em alguma peça? Vamos conversar.",
+      "contact.text": "Seja para uma instalação sob medida, um painel para seu espaço ou um presente único — entre em contato e conversamos sobre as possibilidades.",
+      "contact.btn": "Enviar consulta",
+      "contact.ph_name": "Seu nome",
+      "contact.ph_email": "Seu email",
+      "contact.ph_msg": "Descreva o ambiente ou peça que tem em mente"
+    };
+
+    var defaults = {};
+    var lang = localStorage.getItem('mossform_lang') || 'en';
+
+    function storeDefaults() {
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (!defaults[key]) defaults[key] = el.textContent.trim();
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-placeholder');
+        if (!defaults[key]) defaults[key] = el.placeholder;
+      });
+    }
+
+    function applyLang(l) {
+      lang = l;
+      localStorage.setItem('mossform_lang', l);
+      var dict = l === 'pt' ? PT : defaults;
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-placeholder');
+        if (dict[key]) el.placeholder = dict[key];
+      });
+      var btn = document.getElementById('langToggle');
+      if (btn) btn.textContent = l === 'pt' ? 'EN' : 'PT';
+    }
+
+    storeDefaults();
+    if (lang === 'pt') applyLang('pt');
+
+    document.getElementById('langToggle')?.addEventListener('click', function() {
+      applyLang(lang === 'pt' ? 'en' : 'pt');
+    });
+  })();
+  </script>
 </BaseLayout>
