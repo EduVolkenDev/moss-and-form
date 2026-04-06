@@ -279,11 +279,11 @@ const gallery = [
               <tbody>
                 {artworks.map((art) => (
                   <tr>
-                    <td>{art.name}</td>
-                    <td>{art.type}</td>
-                    <td><span class="status-pill">{art.status}</span></td>
-                    <td>{art.size}</td>
-                    <td>{art.price}</td>
+                    <td data-label="">{art.name}</td>
+                    <td data-label="Type">{art.type}</td>
+                    <td data-label="Status"><span class="status-pill">{art.status}</span></td>
+                    <td data-label="Size">{art.size}</td>
+                    <td data-label="Price">{art.price}</td>
                   </tr>
                 ))}
               </tbody>

@@ -850,15 +850,69 @@ td:first-child {
     font-size: 0.9rem;
   }
 
+  .management-grid {
+    overflow: hidden;
+  }
+
   .dashboard-card {
     border-radius: 24px;
     padding: 1rem;
+    overflow: hidden;
+    max-width: 100%;
   }
 
   .dashboard-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+
+  /* Table → stacked cards on mobile */
+  .table-wrap {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  table, thead, tbody, tr, th, td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  thead { display: none; }
+
+  tbody tr {
+    border: 1px solid rgba(27, 27, 24, 0.08);
+    border-radius: 16px;
+    padding: 0.85rem;
+    margin-bottom: 0.6rem;
+    background: #faf8f3;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    border: none;
+    font-size: 0.88rem;
+  }
+
+  td:first-child {
+    font-size: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(27, 27, 24, 0.06);
+    margin-bottom: 0.3rem;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted-soft);
+    flex-shrink: 0;
+    margin-right: 0.5rem;
   }
 
   .stats-grid {
